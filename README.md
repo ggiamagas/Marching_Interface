@@ -7,10 +7,15 @@ Extensions of the main output include the determination of unit normal vectors, 
 
 
 Subroutines:
-main.m: grid specifications size and x,y,z coordinate files reading. Reading phase field and also velocity and surfactant 		  fields. A call to marching_cubes.m. The display of the overall time and the total interface area after the return 	    of the subroutine. A call to figures.m where all the plots are created. 
-marching_cubes.m: a triple for loop where working on a single cube (parallelogram) per step the points on the edges where 					the interface passes from are retrieved through a call to the interpolator.m. The connectivity of 					      these points is then figured by a call to a triangulation matrix. In this way the different triangles 				  which will represent the interfacece can later be drawn later with
-interpolator.m: based on the values of the phase field on the vertexes of each cube it estimates the location of the 					intersection of the cube edge with the interface 
+
+main.m: grid specifications size and x,y,z coordinate files reading. Reading phase field and also velocity and surfactant fields. A call to marching_cubes.m. The display of the overall time and the total interface area after the return of the subroutine. A call to figures.m where all the plots are created. 
+
+marching_cubes.m: a triple for loop where working on a single cube (parallelogram) per step the points on the edges where	the interface passes from are retrieved through a call to the interpolator.m. The connectivity of these points is then figured by a call to a triangulation matrix. In this way the different triangles which will represent the interfacece can later be drawn.
+
+interpolator.m: based on the values of the phase field on the vertexes of each cube it estimates the location of the intersection of the cube edge with the interface 
+
 triangulation.m: the triangulation matrix
+
 figures.m: all plots
 
 An input folder should be created inside the folder where the .m files are. This folder should be named "input" and it should contain the fields that are going to be read, namely: phi.dat, u.dat, v.dat, w.dat and also the grid coordinate arrays x.dat, y.dat and z.dat.
