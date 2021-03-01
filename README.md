@@ -12,3 +12,5 @@ marching_cubes.m: a triple for loop where working on a single cube (parallelogra
 interpolator.m: based on the values of the phase field on the vertexes of each cube it estimates the location of the 					intersection of the cube edge with the interface 
 triangulation.m: the triangulation matrix
 figures.m: all plots
+
+An input folder should be created inside the folder where the .m files are. This folder should be named "input" and it should contain the fields that are going to be read, namely: phi.dat, u.dat, v.dat, w.dat and also the grid coordinate arrays x.dat, y.dat and z.dat.
