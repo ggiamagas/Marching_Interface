@@ -1,7 +1,7 @@
 function [P,C,S,UI,NUV,NU,Bar,E,Time]=marching_cubes(phi,psi,x,y,z,u,v,w,Nx,Ny,Nz)
 %Marching Cubes main output is P C and Time
 %P: Matrix of all interfacial points determined by means of linear interpolation. 
-%Each point occupies a row of the matrix while each column corresponds the x y and z coordinate respectively
+%Each point occupies a row of the matrix while each column corresponds to the x y and z coordinate respectively
 %C: Connectivity Matrix determines which points (rows of P matrix) will be triangulated i.e. connected with straight lines
 %S: Surfactant Concentration on the interface
 %The way the points are stored in P simplifies the connectivity, every three rows represent the vertices of one triangle
